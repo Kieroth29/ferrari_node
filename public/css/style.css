@@ -1,0 +1,39 @@
+a{
+    text-decoration: none;
+    text-emphasis: none;
+}
+
+.links{
+    overflow: hidden;
+    background-color: #000000;
+}
+
+.links a {
+    float: left;
+    display: block;
+    color: #ED1C24;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.links a:hover {
+    background-color: #ED1C24;
+    color: #FFF200;
+}
+
+body{
+    background-color: #076938;
+}
+
+.header {
+    background-color: #ED1C24;
+    text-align: center;
+    padding: 20px;
+    color: #FFF200;
+}
+
+.main{
+    margin-top: 50px;
+    margin-left: 30%;
+}

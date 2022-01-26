@@ -1,0 +1,16 @@
+.noticias{
+    display: flex;
+    flex-direction: column;
+}
+
+.resumo{
+    width: 675px;
+}
+
+a{
+    color: #FFF200;
+}
+
+.corpo-noticia{
+    margin-right:40%;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <title><%= noticia[0].titulo %></title>
+        <link rel="icon" type="image/x-icon" href="/icon/favicon.ico">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/noticias.css">
+        <meta charset='utf-8'>
+    </head>
+
+    <body>
+        <div class="header">
+            <h3>Base de dados Scuderia Ferrari</h3>
+        </div>
+
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/pilotos">Relação de pilotos</a>
+        </div>
+        
+        <div class="main">
+            <div class="corpo-noticia">
+                <h1><%= noticia[0].titulo %></h1>
+                <p><%= noticia[0].texto %></p>
+                
+                <h3>Notícias relacionadas</h3>
+                <div class="proximas" style="display: flex;flex-direction: column;">
+                    <% for(let i = 0;i < noticiasProximas.length;i++){ %>
+                        <a href="/noticia?id=<%= noticiasProximas[i].id %>"><%= noticiasProximas[i].titulo %></a>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+
+</html>

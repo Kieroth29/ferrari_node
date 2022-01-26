@@ -1,0 +1,29 @@
+th, td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    width: 50%;
+    overflow-x:auto;
+}
+
+th{
+    text-align: left;
+}
+
+tr:nth-child(even){
+    background-color: #FFF200;
+    color: #000;
+}
+
+tr:nth-child(odd){
+    background-color: #ED1C24;
+    color: #FFF;
+}
+
+body{
+    background: url(/img/podium.jpg) no-repeat center fixed;
+    background-size: cover;
+}

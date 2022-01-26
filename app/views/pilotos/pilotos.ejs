@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <head>
+        <title>Relação de pilotos 2022</title>
+        <link rel="icon" type="image/x-icon" href="/icon/favicon.ico">
+        <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/pilotos.css">
+        <meta charset='utf-8'>
+    </head>
+
+    <body>
+        <div class="header">
+            <h3>Base de dados Scuderia Ferrari</h3>
+        </div>
+        
+        <div class="links">
+            <a href="/">Home</a>
+            <a href="/noticias">Notícias</a>
+        </div>
+        
+        <div class="main">
+            <table>
+                <tr>
+                    <th>Nome</th>
+                    <th>Idade</th>
+                    <th>Número</th>
+                </tr>
+                
+                <% for(let i = 0;i < pilotos.length;i++){ %>
+                    <tr>
+                        <td><%= pilotos[i].nome %></td>
+                        <td><%= pilotos[i].idade %> anos</td>
+                        <td><%= pilotos[i].numero %></td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </body>
+
+</html>
