@@ -8,6 +8,17 @@
     </head>
 
     <body>
+
+        <% if (validation){ %>
+            <ul>
+                <% for(var i = 0; i < validation.length; i++){ %> 
+                    <li>
+                        <%= validation[i].msg %>
+                    </li>
+                <% } %> 
+            </ul>
+        <% } %>
+
         <form action="/noticias/adicionar" method="post" style="display: flex;flex-direction: column;">
             <label for="titulo">Título</label>
             <input type="text" id="titulo" name="titulo" style="width:250px;" size="50">
