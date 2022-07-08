@@ -1,9 +1,9 @@
-.noticias{
+.news{
     display: flex;
     flex-direction: column;
 }
 
-.resumo{
+.summary{
     width: 675px;
 }
 
@@ -11,6 +11,6 @@ a{
     color: #FFF200;
 }
 
-.corpo-noticia{
+.article-body{
     margin-right:40%;
 }

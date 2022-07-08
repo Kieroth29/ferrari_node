@@ -2,7 +2,7 @@
 <html lang="pt">
 
     <head>
-        <title>Adicionar notícia</title>
+        <title>Create article</title>
         <link rel="icon" type="image/x-icon" href="/icon/favicon.ico">
         <meta charset="utf-8">
     </head>
@@ -19,14 +19,14 @@
             </ul>
         <% } %>
 
-        <form action="/noticias/adicionar" method="post" style="display: flex;flex-direction: column;">
-            <label for="titulo">Título</label>
+        <form action="/news/create" method="post" style="display: flex;flex-direction: column;">
+            <label for="titulo">Title</label>
             <input type="text" id="titulo" name="titulo" style="width:250px;" size="50">
 
-            <label for="resumo">Resumo</label>
+            <label for="resumo">Summary</label>
             <input type="text" id="resumo" name="resumo" style="width:250px;" size="25">
 
-            <label for="texto">Texto</label>
+            <label for="texto">Body</label>
             <textarea id="texto" name="texto" rows="5" cols="30"></textarea>
             
             <input type="submit" value="Enviar">
