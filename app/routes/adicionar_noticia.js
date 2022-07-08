@@ -3,7 +3,7 @@ const { body, validationResult } = require('express-validator');
 module.exports = function(application){
     
     application.get('/adicionar_noticia', function (req, res) {
-        res.render("admin/adicionar_noticia")
+        res.render("admin/adicionar_noticia", {validation: null})
     });
 
     application.post('/noticias/adicionar', 
@@ -21,7 +21,7 @@ module.exports = function(application){
         var noticia = req.body;
 
         var conn = application.config.db();
-        var noticiasModel = application.app.models.noticiasModel();
+        var noticiasModel = new application.app.models.noticiasModel(conn);
 
         noticiasModel.setNoticia(conn, noticia, function (err, result){
             res.redirect('/noticias');
