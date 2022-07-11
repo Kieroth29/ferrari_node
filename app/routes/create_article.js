@@ -1,9 +1,9 @@
-const { body, validationResult } = require('express-validator');
+const { body } = require('express-validator');
 
 module.exports = function(application){
     
     application.get('/create_article', function (req, res) {
-        res.render("admin/create_article", {validation: null});
+        application.app.controllers.admin.articleCreationForm(application, req, res);
     });
 
     application.post('/news/create', 
@@ -11,22 +11,7 @@ module.exports = function(application){
     body('resumo').notEmpty().withMessage('Article summary is required.').isLength({min: 5, max: 250}).withMessage('Summary size must be between 5 and 250 characters.'),
     body('texto').notEmpty().withMessage('Article body is required.'),
     function (req, res) {
-        const errors = validationResult(req).array();
-
-        if (errors.length > 0) {
-            res.render('admin/create_article', {validation: errors});
-            return;
-        }
-
-        var article = req.body;
-
-        var conn = application.config.db();
-        var newsModel = new application.app.models.newsModel(conn);
-
-        newsModel.setArticle(conn, article, function (err, result){
-            res.redirect('/news');
-        });
-          
+        application.app.controllers.admin.createArticle(application, req, res);
     });
 
 };

@@ -1,12 +1,7 @@
-module.exports = function(app){
+module.exports = function(application){
 
-    app.get('/driver', function (req, res) {
-        var conn = app.config.db();
-        var driversModel = new app.app.models.driversModel(conn);
-
-        driversModel.getDriver(conn, req.query.id, function(err, result){
-            res.render("drivers/driver", {piloto : result});
-        });
+    application.get('/driver', function (req, res) {
+        application.app.controllers.drivers.getDriver(application, req, res);
     });
 
 };
