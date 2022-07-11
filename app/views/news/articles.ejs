@@ -2,30 +2,30 @@
 <html lang="pt">
 
     <head>
-        <title>Notícias</title>
+        <title>News</title>
         <link rel="icon" type="image/x-icon" href="/icon/favicon.ico">
         <link rel="stylesheet" href="/css/style.css">
-        <link rel="stylesheet" href="/css/noticias.css">
+        <link rel="stylesheet" href="/css/articles.css">
         <meta charset='utf-8'>
     </head>
 
     <body>
         <div class="header">
-            <h3>Base de dados Scuderia Ferrari</h3>
+            <h3>Scuderia Ferrari database</h3>
         </div>
         
         <div class="links">
             <a href="/">Home</a>
-            <a href="/pilotos">Relação de pilotos</a>
+            <a href="/drivers">Drivers lineup</a>
         </div>
         
         <div class="main">
             <div class="noticias">
-                <% for(let i = 0;i < noticias.length; i++){%>
+                <% for(let i = 0;i < articles.length; i++){%>
                     <div class="noticia">
-                        <h3><%= noticias[i].titulo %></h3>
-                        <p class="resumo"><%= noticias[i].resumo %></p>
-                        <a href="/noticia?id=<%= noticias[i].id %>">Continuar lendo</a>
+                        <h3><%= articles[i].titulo %></h3>
+                        <p class="resumo"><%= articles[i].resumo %></p>
+                        <a href="/article?id=<%= articles[i].id %>">Keep reading</a>
                     </div>
                 <% } %>
             </div>
