@@ -1,6 +1,6 @@
 module.exports = function(application){
 
-    application.get('/delete_article', function (req, res){
+    application.delete('/delete_article', function (req, res){
         var conn = application.config.db();
 
         var articleId = req.query.articleId;
